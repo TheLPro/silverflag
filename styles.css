@@ -7,11 +7,15 @@ body[data-theme='normal'] {
     --primary: #29C1D6;
     --primary-light: #b9d5e3;
 }
-
+body[data-scroll="true"] {
+    overflow: auto;
+}
+body[data-scroll="false"] {
+    overflow: hidden;
+}
 html, body {
     margin: 0;
     font-family: 'Space Grotesk';
-    overflow: auto;
 }
 .column { 
     float: left;
@@ -24,8 +28,10 @@ html, body {
 /* text */
 
 .text {
+    margin-top: 15vh;
     padding: 40px;
 }
+
 .title {
     font-size: 5rem;
     font-weight: 700;
@@ -70,7 +76,6 @@ button:active {
     transform: scale(0.9);
 }
 
-
 /* image */
 
 .image {
@@ -83,7 +88,6 @@ button:active {
     background-color: silver;
     border-radius: 10px;
     border-bottom-right-radius: 0;
-==
 }
 .pole {
     width: 20px;
@@ -91,4 +95,76 @@ button:active {
     background-color: var(--primary);
     margin-left: 480px;
     position: absolute;
+}
+
+/* responsiveness */
+
+@media screen and (max-height: 500px) {
+    .text {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .image {
+        display: none;
+    }
+    .flag {
+        display: none;
+    }
+    .pole {
+        display: none;
+    }
+    .text {
+        width: 100%;
+        align-items: center;
+    }
+    button {
+        text-wrap: nowrap;
+    }
+    .title {
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width: 510px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    button {
+        margin-bottom: 20px;
+        width: 90vw;
+    }
+}
+.mobile {
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .text {
+        margin-top: 6vh;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 7vw;
+    }
+    .word {
+        border-bottom: 3px var(--primary) solid;
+    }
+    .dot {
+        display: none;
+    }
+    .mobile {
+        display: inline;
+        visibility: hidden;
+    }
+    .ms {
+        white-space: pre-line;
+    }
+    .title {
+        font-size: 15vw;
+    }
+}
+@media screen and (max-width: 430px) {
+    .text {
+        margin-top: 10vh;
+    }
 }
