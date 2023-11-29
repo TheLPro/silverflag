@@ -82,7 +82,7 @@ button:active {
     display: block;
 }
 .flag {
-    margin-left: 100px;
+    margin-left: 110px;
     width: 400px;
     height: 200px;
     background-color: silver;
@@ -91,9 +91,9 @@ button:active {
 }
 .pole {
     width: 20px;
-    height: 600px;
+    height: 2000px;
     background-color: var(--primary);
-    margin-left: 480px;
+    margin-left: 490px;
     position: absolute;
 }
 
