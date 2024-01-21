@@ -9,11 +9,12 @@ body[data-theme='normal'] {
     --primary: #33ff00;
     --primary-dark: #041400;
 }
-
 html, body {
     margin: 0;
     font-family: 'Space Grotesk';
     background-color: var(--bg);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 * {
     box-sizing: border-box;
@@ -25,6 +26,7 @@ html, body {
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
+    height: 100vh;
 }
 
 /* text */
@@ -42,7 +44,7 @@ html, body {
 .subtitle {
     margin-top: 0px;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 20px;
 }
 .dot {
@@ -201,4 +203,47 @@ button:active {
     .text {
         margin-top: 10vh;
     }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+.bg {
+    position: absolute;
+    width: 150ch;
+    z-index: 69;
+    text-wrap: wrap;
+    word-wrap: break-word;
+
+    color: var(--bg);
+    
+    transition: all .2s ease-in-out;
+}
+.bg:hover {
+    color: var(--primary);
+    filter: blur(0px) brightness(0.3) saturate(1.5);
+}
+.section {
+    margin-top: 50px;
+    padding: 20px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    z-index: 70;
+    border-radius: 10px;
+    border: 2px var(--primary) solid;
+}
+.s-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+.s-text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
